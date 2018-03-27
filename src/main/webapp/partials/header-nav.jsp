@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: scottsaegert
@@ -9,37 +10,10 @@
 <html>
 <head>
     <title>Welcome</title>
-    <style>
-        .main-nav {
-            clear: both;
-            width: 100%;
-            height: 3em;
-        }
-        .main-nav ul{
-            list-style: none;
-            float: left;
-            padding: 0;
-            margin: 0;
-        }
-        .main-nav li{
-            float: left;
-            padding-left: 1em;
-            padding-right: 1em;
-            align-content: center;
-            text-align: center;
-            vertical-align: middle;
-            border-right: #666 solid .05em;
-            font-size: 2em;
-            font-family: Avenir;
-        }
-        .main-nav li:last-child {
-            border-right: 0;
-        }
-        .main-nav li a {
-            text-decoration: none;
-        }
-
-    </style>
+    <%--<style><jsp:include page="/css/style.css" /></style>--%>
+    <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
+    <%--<link rel="stylesheet" href="/css/style.css">--%>
+    <%--<link rel="stylesheet" href="<jsp:include page="/css/style.css" />">--%>
 </head>
 <body>
 <div class="main-nav">

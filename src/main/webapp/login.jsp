@@ -2,13 +2,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    String userName = request.getParameter("userName");
-    String password = request.getParameter("password");
-    if (userName == null) {
-    userName = "User";
-}
-    if (userName.equalsIgnoreCase("admin") && password.equals("password")) {
-        response.sendRedirect("/profile.jsp");
+    if (request.getMethod().equalsIgnoreCase("post")) {
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
+        if (userName.equalsIgnoreCase("admin") && password.equals("password")) {
+            response.sendRedirect("/profile.jsp");
+        }
     }
 %>
 
