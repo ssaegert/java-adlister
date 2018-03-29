@@ -11,12 +11,14 @@ public class LoginServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             if (username.equals("admin") && password.equals("password")) {
-                response.sendRedirect("/profile.jsp");
+                response.sendRedirect("/profile");
+            } else  {
+                response.sendRedirect("/login");
             }
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            response.sendRedirect("/login.jsp");
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 }
